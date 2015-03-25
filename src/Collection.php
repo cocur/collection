@@ -25,6 +25,7 @@ class Collection implements CollectionInterface
      */
     public function add(ItemInterface $item)
     {
+        $item->setCollection($this);
         $this->items[] = $item;
 
         return $this;

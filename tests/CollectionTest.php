@@ -32,6 +32,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
     public function addAddsItemToCollection()
     {
         $item = $this->getMockItem();
+        $item->shouldReceive('setCollection')->with($this->collection)->once();
         $this->collection->add($item);
 
         $this->assertContains($item, $this->collection);
@@ -44,6 +45,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
     public function getIteratorReturnsIterator()
     {
         $item = $this->getMockItem();
+        $item->shouldReceive('setCollection')->with($this->collection)->once();
         $this->collection->add($item);
         $iterator = $this->collection->getIterator();
 
@@ -58,6 +60,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
     public function countReturnsNumberOfItems()
     {
         $item = $this->getMockItem();
+        $item->shouldReceive('setCollection')->with($this->collection)->once();
         $this->collection->add($item);
         $this->collection->add($item);
 
