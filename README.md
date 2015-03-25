@@ -78,8 +78,10 @@ of its items.
 
 ### AbstractItem
 
-`Cocur\Collection\AbstractItem` implements the methods `Cocur\Collection\ItemInterface`. It simply sets and gets the
-collection and is great if you don't need a specific logic on how to set and get the collection on an item.
+`Cocur\Collection\AbstractItem` implements the methods from `Cocur\Collection\ItemInterface`. It simply sets and gets
+the collection and is great if you don't need a specific logic on how to set and get the collection on an item.
+
+`AbstractItem` is, as its name suggests, an abstract class and you need to extend it.
 
 ### Item
 
