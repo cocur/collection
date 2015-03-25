@@ -1,5 +1,5 @@
-Collection
-==========
+Cocur\Collection
+================
 
 > Arrays are great, but sometimes the items need to know the thing they are a part of. Then you need a `Collection`.
 
