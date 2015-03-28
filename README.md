@@ -102,9 +102,8 @@ Item create(mixed $value = null)
 
 ### ArrayItem
 
-While `Item` stores a single value, `Cocur\Collection\ArrayItem` is meant to hold an array. It implements the
-`ArrayAccess` interface and offers methods to set, get and remove elements from the item as well as to check for their
-existence.
+While `Item` stores a single value, `Cocur\Collection\ArrayItem` is meant to hold an array. It implements methods to
+set, get and remove elements from the item as well as to check for their existence.
 
 ```php
 ArrayItem set(mixed $key, mixed $value)
@@ -114,6 +113,29 @@ ArrayItem remove(mixed $key()
 ```
 
 The `get()` and `remove()` methods throw an `OutOfBoundsException` if the element with the given key does not exist.
+
+You can create new instances using the static `::createFromArray()` method:
+
+```php
+ArrayItem createFromArray(array $data = [])
+```
+
+Because `ArrayItem` implements `ArrayAccess`, `IteratorAggregate` and `Countable` you can use it in most cases just
+like you would use an array.
+
+```php
+$item = ArrayItem::createFromArray(['foo' => 'bar');
+$item['qoo'] = 'qoz';
+echo count($item); // -> 2
+if (isset($item['qoo'])) {
+    echo $item['qoo']; // -> "qoz"
+}
+
+foreach ($item as $key => $value) {
+    echo "$key: $value, ";
+}
+// -> "foo: bar, qoo: qoz, "
+```
 
 
 Changelog

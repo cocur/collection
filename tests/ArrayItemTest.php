@@ -106,4 +106,41 @@ class ArrayItemTest extends PHPUnit_Framework_TestCase
         unset($this->item['foo']); // offsetUnset()
         $this->assertFalse(isset($this->item['foo'])); // offsetExists()
     }
+
+    /**
+     * @test
+     * @covers Cocur\Collection\ArrayItem::count()
+     */
+    public function countReturnsTheNumberOfElementsInTheItem()
+    {
+        $this->item->set('foo', 'bar');
+        $this->item->set('bar', 'foo');
+
+        $this->assertCount(2, $this->item);
+    }
+
+    /**
+     * @test
+     * @covers Cocur\Collection\ArrayItem::getIterator()
+     */
+    public function getIteratorReturnsArrayIterator()
+    {
+        $this->item->set('foo', 'bar');
+        $iterator = $this->item->getIterator();
+
+        $this->assertInstanceOf('ArrayIterator', $iterator);
+        $this->assertSame('foo', key($iterator));
+        $this->assertSame('bar', current($iterator));
+    }
+
+    /**
+     * @test
+     * @covers Cocur\Collection\ArrayItem::createFromArray()
+     */
+    public function createFromArrayReturnsNewInstance()
+    {
+        $item = ArrayItem::createFromArray(['foo' => 'bar']);
+
+        $this->assertSame('bar', $item['foo']);
+    }
 }

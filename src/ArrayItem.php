@@ -3,6 +3,9 @@
 namespace Cocur\Collection;
 
 use ArrayAccess;
+use ArrayIterator;
+use Countable;
+use IteratorAggregate;
 use OutOfBoundsException;
 
 /**
@@ -12,12 +15,25 @@ use OutOfBoundsException;
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2015 Florian Eckerstorfer
  */
-class ArrayItem extends AbstractItem implements ArrayAccess
+class ArrayItem extends AbstractItem implements ArrayAccess, Countable, IteratorAggregate
 {
     /**
      * @var array
      */
     protected $data = [];
+
+    /**
+     * @param array $data
+     *
+     * @return ArrayItem
+     */
+    public static function createFromArray(array $data = [])
+    {
+        $item = new self();
+        $item->data = $data;
+
+        return $item;
+    }
 
     /**
      * @param mixed $key
@@ -119,5 +135,21 @@ class ArrayItem extends AbstractItem implements ArrayAccess
     public function offsetUnset($offset)
     {
         $this->remove($offset);
+    }
+
+    /**
+     * @return int
+     */
+    public function count()
+    {
+        return count($this->data);
+    }
+
+    /**
+     * @return ArrayIterator
+     */
+    public function getIterator()
+    {
+        return new ArrayIterator($this->data);
     }
 }
