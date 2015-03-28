@@ -19,7 +19,7 @@ abstract class AbstractItem implements ItemInterface
     /**
      * @param CollectionInterface $collection
      *
-     * @return ItemInterface
+     * @return AbstractItem
      */
     public function setCollection(CollectionInterface $collection)
     {

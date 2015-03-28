@@ -14,5 +14,10 @@ use IteratorAggregate;
  */
 interface CollectionInterface extends IteratorAggregate, Countable
 {
+    /**
+     * @param ItemInterface $item
+     *
+     * @return CollectionInterface
+     */
     public function add(ItemInterface $item);
 }

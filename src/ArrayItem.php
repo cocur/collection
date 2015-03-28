@@ -29,7 +29,7 @@ class ArrayItem extends AbstractItem implements ArrayAccess, Countable, Iterator
      */
     public static function createFromArray(array $data = [])
     {
-        $item = new self();
+        $item       = new self();
         $item->data = $data;
 
         return $item;
