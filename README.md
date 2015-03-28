@@ -100,6 +100,21 @@ In addition `Cocur\Collection\Item` has a factory method called `::create()`:
 Item create(mixed $value = null)
 ```
 
+### ArrayItem
+
+While `Item` stores a single value, `Cocur\Collection\ArrayItem` is meant to hold an array. It implements the
+`ArrayAccess` interface and offers methods to set, get and remove elements from the item as well as to check for their
+existence.
+
+```php
+ArrayItem set(mixed $key, mixed $value)
+bool has(mixed $key)
+mixed get(mixed $key)
+ArrayItem remove(mixed $key()
+```
+
+The `get()` and `remove()` methods throw an `OutOfBoundsException` if the element with the given key does not exist.
+
 
 Changelog
 ---------
