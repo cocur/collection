@@ -30,6 +30,7 @@ libraries. However, this library also contains implementations that are ready to
 - [`Collection`](#collection)
 - [`AbstractItem`](#abstractitem)
 - [`Item`](#item)
+- [`ArrayItem`](#arrayitem)
 
 ### CollectionInterface
 
