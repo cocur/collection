@@ -3,6 +3,10 @@ Cocur\Collection
 
 > Arrays are great, but sometimes the items need to know the thing they are a part of. Then you need a `Collection`.
 
+[![Build Status](https://img.shields.io/travis/cocur/collection/master.svg?style=flat)](https://travis-ci.org/cocur/collection)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/cocur/collection.svg?style=flat)](https://scrutinizer-ci.com/g/cocur/collection/?branch=master)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/cocur/collection.svg?style=flat)](https://scrutinizer-ci.com/g/cocur/collection/?branch=master)
+
 Developed by [Florian Eckerstorfer](https://florian.ec) ([Twitter](https://twitter.com/Florian_)) in Vienna, Europe.
 
 
