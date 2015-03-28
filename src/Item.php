@@ -17,6 +17,21 @@ class Item extends AbstractItem
     protected $value;
 
     /**
+     * @param mixed|null $value
+     *
+     * @return Item
+     */
+    public static function create($value = null)
+    {
+        $item = new self();
+        if ($value) {
+            $item->setValue($value);
+        }
+
+        return $item;
+    }
+
+    /**
      * @param mixed $value
      *
      * @return Item

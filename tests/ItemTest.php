@@ -49,4 +49,17 @@ class ItemTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame($collection, $this->item->getCollection());
     }
+
+    /**
+     * @test
+     * @covers Cocur\Collection\Item::create()
+     */
+    public function createCreatesItemWithValue()
+    {
+        $item = Item::create('foobar');
+
+        $this->assertInstanceOf('Cocur\Collection\Item', $item);
+
+        $this->assertSame('foobar', $item->getValue());
+    }
 }

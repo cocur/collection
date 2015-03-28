@@ -89,6 +89,17 @@ the collection and is great if you don't need a specific logic on how to set and
 `getCollection()` methods also implements `setValue()` and `getValue()` to set and get an arbitrary value. You can wrap
 `Item` around a scalar value or around an object that is out of your control and does not implement `ItemInterface`.
 
+```php
+Item setValue(mixed $value)
+mixed getValue()
+```
+
+In addition `Cocur\Collection\Item` has a factory method called `::create()`:
+
+```php
+Item create(mixed $value = null)
+```
+
 
 Changelog
 ---------
