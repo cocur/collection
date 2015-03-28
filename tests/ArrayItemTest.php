@@ -129,8 +129,10 @@ class ArrayItemTest extends PHPUnit_Framework_TestCase
         $iterator = $this->item->getIterator();
 
         $this->assertInstanceOf('ArrayIterator', $iterator);
-        $this->assertSame('foo', key($iterator));
-        $this->assertSame('bar', current($iterator));
+        foreach ($this->item as $key => $value) {
+            $this->assertSame('foo', $key);
+            $this->assertSame('bar', $value);
+        }
     }
 
     /**

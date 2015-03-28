@@ -50,7 +50,9 @@ class CollectionTest extends PHPUnit_Framework_TestCase
         $iterator = $this->collection->getIterator();
 
         $this->assertInstanceOf('Iterator', $iterator);
-        $this->assertSame($item, current($iterator));
+        foreach ($iterator as $itItem) {
+            $this->assertSame($item, $itItem);
+        }
     }
 
     /**
