@@ -146,8 +146,13 @@ foreach ($item as $key => $value) {
 Changelog
 ---------
 
-*No version releases yet.*
+### Version 0.1 (28 April 2015)
+
+- Initial release
 
 
 License
 -------
+
+The MIT license applies to cocur/collection. For the full copyright and license information, please view the
+[LICENSE](https://github.com/cocur/collection/blob/master/LICENSE) file distributed with this source code.
