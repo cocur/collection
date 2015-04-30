@@ -63,6 +63,17 @@ class ArrayItemTest extends PHPUnit_Framework_TestCase
      * @test
      * @covers Cocur\Collection\ArrayItem::has()
      */
+    public function hasReturnsTrueIfElementExistsButIsNull()
+    {
+        $this->item->set('foo', null);
+
+        $this->assertTrue($this->item->has('foo'));
+    }
+
+    /**
+     * @test
+     * @covers Cocur\Collection\ArrayItem::has()
+     */
     public function hasReturnsFalseIfElementDoesNotExist()
     {
         $this->assertFalse($this->item->has('invalid'));

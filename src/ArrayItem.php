@@ -55,7 +55,7 @@ class ArrayItem extends AbstractItem implements ArrayAccess, Countable, Iterator
      */
     public function has($key)
     {
-        return isset($this->data[$key]);
+        return array_key_exists($key, $this->data);
     }
 
     /**
