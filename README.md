@@ -108,13 +108,15 @@ Item create(mixed $value = null)
 ### ArrayItem
 
 While `Item` stores a single value, `Cocur\Collection\ArrayItem` is meant to hold an array. It implements methods to
-set, get and remove elements from the item as well as to check for their existence.
+set, get and remove elements from the item as well as to check for their existence. In addition the `toArray()` method
+returns the underlying array.
 
 ```php
 ArrayItem set(mixed $key, mixed $value)
 bool has(mixed $key)
 mixed get(mixed $key)
 ArrayItem remove(mixed $key()
+array toArray()
 ```
 
 The `get()` and `remove()` methods throw an `OutOfBoundsException` if the element with the given key does not exist.
