@@ -148,6 +148,17 @@ class ArrayItemTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @covers Cocur\Collection\ArrayItem::toArray()
+     */
+    public function toArrayReturnsArray()
+    {
+        $this->item->set('foo', 'bar');
+
+        $this->assertSame(['foo' => 'bar'], $this->item->toArray());
+    }
+
+    /**
+     * @test
      * @covers Cocur\Collection\ArrayItem::createFromArray()
      */
     public function createFromArrayReturnsNewInstance()

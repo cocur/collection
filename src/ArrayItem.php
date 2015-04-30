@@ -152,4 +152,12 @@ class ArrayItem extends AbstractItem implements ArrayAccess, Countable, Iterator
     {
         return new ArrayIterator($this->data);
     }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return $this->data;
+    }
 }
