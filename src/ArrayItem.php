@@ -67,8 +67,10 @@ class ArrayItem extends AbstractItem implements ArrayAccess, Countable, Iterator
      */
     public function get($key)
     {
-        if (!$this->has($key)) {
+        if (func_num_args() === 1 && !$this->has($key)) {
             throw new OutOfBoundsException(sprintf('This ArrayItem has no element with key "%s".', $key));
+        } else if (func_num_args() === 2) {
+            return func_get_arg(1);
         }
 
         return $this->data[$key];

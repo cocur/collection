@@ -39,6 +39,15 @@ class ArrayItemTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @covers Cocur\Collection\ArrayItem::get()
+     */
+    public function getReturnsDefaultValueIfDefaultValueIsGiven()
+    {
+        $this->assertNull($this->item->get('foo', null));
+    }
+
+    /**
+     * @test
      * @covers                   Cocur\Collection\ArrayItem::get()
      * @expectedException        OutOfBoundsException
      * @expectedExceptionMessage This ArrayItem has no element with key "invalid".

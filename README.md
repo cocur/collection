@@ -114,12 +114,14 @@ returns the underlying array.
 ```php
 ArrayItem set(mixed $key, mixed $value)
 bool has(mixed $key)
-mixed get(mixed $key)
+mixed get(mixed $key[, mixed $defaultValue])
 ArrayItem remove(mixed $key()
 array toArray()
 ```
 
 The `get()` and `remove()` methods throw an `OutOfBoundsException` if the element with the given key does not exist.
+However, instead of throwing an exception `get()` can also return a default value if one is provided as second
+argument.
 
 You can create new instances using the static `::createFromArray()` method:
 
@@ -145,8 +147,12 @@ foreach ($item as $key => $value) {
 ```
 
 
-Changelog
----------
+Change Log
+----------
+
+### Version 0.1.1 (18 May 2015)
+
+- Add option default value to `ArrayItem::get()`
 
 ### Version 0.1 (28 April 2015)
 
