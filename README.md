@@ -4,8 +4,10 @@ Cocur\Collection
 > Arrays are great, but sometimes the items need to know the thing they are a part of. Then you need a `Collection`.
 
 [![Build Status](https://img.shields.io/travis/cocur/collection/master.svg?style=flat)](https://travis-ci.org/cocur/collection)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/8vnaaxv3kabkb42j?svg=true)](https://ci.appveyor.com/project/florianeckerstorfer/collection)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/cocur/collection.svg?style=flat)](https://scrutinizer-ci.com/g/cocur/collection/?branch=master)
 [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/cocur/collection.svg?style=flat)](https://scrutinizer-ci.com/g/cocur/collection/?branch=master)
+[![StyleCI](https://styleci.io/repos/32883978/shield)](https://styleci.io/repos/32883978)
 
 Developed by [Florian Eckerstorfer](https://florian.ec) ([Twitter](https://twitter.com/Florian_)) in Vienna, Europe.
 
@@ -75,7 +77,7 @@ CollectionInterface|null getCollection()
 ```
 
 Should return a reference to the collection or `null` if the item does not have a collection.
- 
+
 ### Collection
 
 `Cocur\Collection\Collection` implements `Cocur\Collection\CollectionInterface` and uses a simple array to keep track
