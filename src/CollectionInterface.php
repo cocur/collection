@@ -6,9 +6,8 @@ use Countable;
 use IteratorAggregate;
 
 /**
- * CollectionInterface
+ * CollectionInterface.
  *
- * @package   Cocur\Collection
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2015 Florian Eckerstorfer
  */

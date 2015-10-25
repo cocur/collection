@@ -5,9 +5,8 @@ namespace Cocur\Collection;
 use ArrayIterator;
 
 /**
- * Collection
+ * Collection.
  *
- * @package   Cocur\Collection
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2015 Florian Eckerstorfer+
  */
