@@ -6,9 +6,8 @@ use OutOfBoundsException;
 use PHPUnit_Framework_TestCase;
 
 /**
- * ArrayItemTest
+ * ArrayItemTest.
  *
- * @package   Cocur\Collection
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit

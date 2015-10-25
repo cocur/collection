@@ -9,9 +9,8 @@ use IteratorAggregate;
 use OutOfBoundsException;
 
 /**
- * ArrayItem
+ * ArrayItem.
  *
- * @package   Cocur\Collection
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2015 Florian Eckerstorfer
  */
@@ -69,7 +68,7 @@ class ArrayItem extends AbstractItem implements ArrayAccess, Countable, Iterator
     {
         if (func_num_args() === 1 && !$this->has($key)) {
             throw new OutOfBoundsException(sprintf('This ArrayItem has no element with key "%s".', $key));
-        } else if (func_num_args() === 2) {
+        } elseif (func_num_args() === 2) {
             return func_get_arg(1);
         }
 
@@ -119,8 +118,6 @@ class ArrayItem extends AbstractItem implements ArrayAccess, Countable, Iterator
     /**
      * @param mixed $offset
      * @param mixed $value
-     *
-     * @return void
      */
     public function offsetSet($offset, $value)
     {
@@ -129,8 +126,6 @@ class ArrayItem extends AbstractItem implements ArrayAccess, Countable, Iterator
 
     /**
      * @param mixed $offset
-     *
-     * @return void
      *
      * @throws OutOfBoundsException if $key does not exist in the array
      */

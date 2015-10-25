@@ -6,9 +6,8 @@ use Mockery;
 use PHPUnit_Framework_TestCase;
 
 /**
- * ItemTest
+ * ItemTest.
  *
- * @package   Cocur\Collection
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit
